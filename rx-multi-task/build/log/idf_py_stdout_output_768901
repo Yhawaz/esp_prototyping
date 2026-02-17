@@ -1,0 +1,94 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/rx-multi-task/build/rx-multi-task.elf /home/yabi/skool/6900/prototyping/rx-multi-task/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+ UART I/O pins
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (164) app_iniESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 17 2026 10:14:24[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a524h ( 42276) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001a54c vaddr=3fc8d800 size=013b8h (  5048) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b90c vaddr=40380000 size=0470ch ( 18188) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18d40h (101696) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=00038d68 vaddr=4038470c size=08f8ch ( 36748) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00041cfc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (162) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (164) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     rx-multi-task[0m
+[0;32mI (172) app_init: App version:      61af1f0-dirty[0m
+[0;32mI (177) app_init: Compile time:     Feb 17 2026 10:13:43[0m
+[0;32mI (182) app_init: ELF file SHA256:  70ab1dd71...[0m
+[0;32mI (186) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (191) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (195) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (209) heap_init: At 3FC8FAB0 len 00030550 (193 KiB): RAM[0m
+[0;32mI (214) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (232) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (250) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (266) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (273) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+[0;32mI (283) main_task: Returned from app_main()[0m
+[0;32mI (1293) RYLR998_RX_TEST: Recv from device str: +OK[0m
++OK
++OK
++OK
+
+[0;32mI (34513) RYLR998_RX_TEST: Recv from device str: +RCV=0,18,TEMP=0.00,HUM=0.00,-25,8[0m
+
+[0;32mI (37533) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.52,HUM=32.78,-27,8[0m
++RCV=0,20,TEMP=23.51,HUM=32.36,-27,9
+
+[0;32mI (40553) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.49,HUM=31.78,-28,8[0m
+
+[0;32mI (46593) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.50,HUM=30.97,-29,8[0m
++RCV=0,20,TEMP=23.51,HUM=30.80,-28,9
+
+[0;32mI (49613) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.50,HUM=30.67,-29,8[0m
+
+[0;32mI (52633) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.50,HUM=30.57,-24,8[0m
++RCV=0,20,TEMP=23.50,HUM=30.53,-27,8
+
+[0;32mI (55653) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.50,HUM=30.43,-29,8[0m
+
+[0;32mI (58673) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.49,HUM=30.41,-31,8[0m
++RCV=0,20,TEMP=23.53,HUM=30.38,-25,8
+
+[0;32mI (61693) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.49,HUM=30.32,-30,9[0m
+
+[0;32mI (64713) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.48,HUM=30.30,-28,8[0m
+
+[0;32mI (67733) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.50,HUM=30.30,-33,9[0m
++RCV=0,20,TEMP=23.50,HUM=30.40,-33,8
+

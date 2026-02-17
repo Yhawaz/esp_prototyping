@@ -149,4 +149,6 @@
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/spiffs/libspiffs.a
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/json/libjson.a
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/main/libmain.a
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a

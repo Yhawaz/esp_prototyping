@@ -827,6 +827,13 @@
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/__idf_espressif__mpu6050.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/edit_cache.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/rebuild_cache.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/list_install_components.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/install.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/install/local.dir
+/home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/espressif__mpu6050/CMakeFiles/install/strip.dir
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/yabi/skool/6900/prototyping/rx-multi-task/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
