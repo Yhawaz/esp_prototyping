@@ -1,0 +1,68 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/lora-test1rx/build/lora-test1rx.elf /home/yabi/skool/6900/prototyping/lora-test1rx/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 15 2026 20:15:15[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=08ba0h ( 35744) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=00018bc8 vaddr=3fc8bc00 size=01380h (  4992) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00019f50 vaddr=40380000 size=060c8h ( 24776) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=13288h ( 78472) map[0m
+[0;32mI (125) esp_image: segment 4: paddr=000332b0 vaddr=403860c8 size=05ab4h ( 23220) load[0m
+[0;32mI (129) esp_image: segment 5: paddr=00038d6c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (133) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (150) cpu_start: Unicore app[0m
+[0;32mI (158) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (158) cpu_start: Pro cpu start user code[0m
+[0;32mI (158) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (160) app_init: Application information:[0m
+[0;32mI (164) app_init: Project name:     lora-test1rx[0m
+[0;32mI (168) app_init: App version:      1[0m
+[0;32mI (172) app_init: Compile time:     Feb 15 2026 20:15:11[0m
+[0;32mI (177) app_init: ELF file SHA256:  065ba3d2d...[0m
+[0;32mI (181) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (186) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (190) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (194) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (198) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (204) heap_init: At 3FC8DE40 len 000321C0 (200 KiB): RAM[0m
+[0;32mI (209) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (215) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (221) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[1;31mE (268) uart: uart_read_bytes(1666): uart driver error[0m
+[0;32mI (268) RYLR998_RX_TEST: Recv from device str: T��?T��?�7G�/�U��IT�����'�Pr���c2�������[&w�G��}~F.UZoy�L�o��ފ_qRє߾�/6�zQ9�f�5�&�@V��Z�����|"��lY�:�>O]H78����F�����%%�t6z�2�	v��5�A6F�]�mv'����3�Ƈ�9�Uc�z��vT�����#Z�Nw�fm�kC�Y���^����H��K� 	[0mv��6��VKP�=�O��=����P���v�U�W���k�	�A	m�K>�Tmh�70�̸�)$�����d�J%Wث�~�` ���Xp��U����Am�R\��c71
+�8#2*P�6M�x�/�3~�>���綠��N:�;>w�FS�v��ͬoC��n��GZ��Y�`Y=����Of�8j�U�fB�M}F�&�J'��n�"1"d�^�2(�Ҽ�y�K�jKx��F��{���o�� f�i��5���z��zC�9Tz�$+�o�L��դR�!���(��#c"*	U��[٥�I�R��N��TIeHSXdn)C��f��B�,�X�{�M2�ɘ�Sc��zmq��*7�qX�6H��3^˛��ɀ��\�@
+ /ڌta��
+[0;32mI (328) main_task: Returned from app_main()[0m
+[1;31mE (3328) uart: uart_read_bytes(1666): uart driver error[0m
+[0;32mI (3328) RYLR998_RX_TEST: Recv from device str: T��?T��?�7G�/�U��IT�����'�Pr���c2�������[&w�G��}~F.UZoy�L�o��ފ_qRє߾�/6�zQ9�f�5�&�@V��Z�����|"��lY�:�>O]H78����F�����%%�t6z�2�	v��5�A6F�]�mv'����3�Ƈ�9�Uc�z��vT�����#Z�Nw�fm�kC�Y���^����H��K� 	[0mv��6��VKP�=�O��=����P���v�U�W���k�	�A	m�K>�Tmh�70�̸�)$�����d�J%Wث�~�` ���Xp��U����Am�R\��c71
+�8#2*P�6M�x�/�3~�>���綠��N:�;>w�FS�v��ͬoC��n��GZ��Y�`Y=����Of�8j�U�fB�M}F�&�J'��n�"1"d�^�2(�Ҽ�y�K�jKx��F��{���o�� f�i��5���z��zC�9Tz�$+�o�L��դR�!���(��#c"*	U��[٥�I�R��N��TIeHSXdn)C��f��B�,�X�{�M2�ɘ�Sc��zmq��*7�qX�6H��3^˛��ɀ��\�@
+ /ڌta��
+[1;31mE (6378) uart: uart_read_bytes(1666): uart driver error[0m
+[0;32mI (6378) RYLR998_RX_TEST: Recv from device str: T��?T��?�7G�/�U��IT�����'�Pr���c2�������[&w�G��}~F.UZoy�L�o��ފ_qRє߾�/6�zQ9�f�5�&�@V��Z�����|"��lY�:�>O]H78����F�����%%�t6z�2�	v��5�A6F�]�mv'����3�Ƈ�9�Uc�z��vT�����#Z�Nw�fm�kC�Y���^����H��K� 	[0mv��6��VKP�=�O��=����P���v�U�W���k�	�A	m�K>�Tmh�70�̸�)$�����d�J%Wث�~�` ���Xp��U����Am�R\��c71

@@ -1,0 +1,353 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/lora-temptx/build/lora-temptx.elf /home/yabi/skool/6900/prototyping/lora-temptx/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038960a: [0;33mmulti_heap_realloc_impl[0m[0m at [0;32m/opt/esp-idf/components/heap/multi_heap.c[0m[0m:[1;31m245[0m
+[0m--- 0x4038960a: [0;33mmulti_heap_realloc_impl[0m[0m at [0;32m/opt/esp-idf/components/heap/multi_heap.c[0m[0m:[1;31m245[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389ce0: [0;33mmapping_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m312[0m
+[0m--- (inlined by) [0;33mmapping_search[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m332[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m602[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40389ce0: [0;33mmapping_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m312[0m
+[0m--- (inlined by) [0;33mmapping_search[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m332[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m602[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389b82: [0;33mblock_absorb[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m501[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m539[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m633[0m
+[0m--- 0x40389b82: [0;33mblock_absorb[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m501[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m539[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m633[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389a24: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m388[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_prev[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m522[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m632[0m
+[0m--- 0x40389a24: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m388[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_prev[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m522[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m632[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389768: [0;33mblock_absorb[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m501[0m
+[0m--- (inlined by) [0;33mblock_merge_prev[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m523[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m632[0m
+[0m--- 0x40389768: [0;33mblock_absorb[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m501[0m
+[0m--- (inlined by) [0;33mblock_merge_prev[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m523[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m632[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x403898c6: [0;33minsert_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m412[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m430[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m634[0m
+[0m--- 0x403898c6: [0;33minsert_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m412[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m430[0m
+[0m--- (inlined by) [0;33mtlsf_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m634[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389e3e: [0;33mblock_set_prev_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_block_functions.h[0m[0m:[1;31m123[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m553[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40389e3e: [0;33mblock_set_prev_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_block_functions.h[0m[0m:[1;31m123[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m553[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a7d0: [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m604[0m
+[0m--- 0x4038a7d0: [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m604[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a0fa: [0;33mtlsf_fls[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m114[0m
+[0m--- (inlined by) [0;33mmapping_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m316[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m554[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x4038a0fa: [0;33mtlsf_fls[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m114[0m
+[0m--- (inlined by) [0;33mmapping_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m316[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m554[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a04b: [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m548[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x4038a04b: [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m548[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a3b6: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m572[0m
+[0m--- 0x4038a3b6: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m572[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389d8f: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m378[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40389d8f: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m378[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a5c3: [0;33minsert_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m399[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m430[0m
+[0m--- (inlined by) [0;33mblock_trim_free_leading[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m589[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m605[0m
+[0m--- 0x4038a5c3: [0;33minsert_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m399[0m
+[0m--- (inlined by) [0;33mblock_insert[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m430[0m
+[0m--- (inlined by) [0;33mblock_trim_free_leading[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m589[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m605[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a1a9: [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m627[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x4038a1a9: [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m627[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a465: [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m618[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m572[0m
+[0m--- 0x4038a465: [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m618[0m
+[0m--- (inlined by) [0;33mtlsf_memalign_offs[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m572[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389d8f: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m378[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40389d8f: [0;33mremove_free_block[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m378[0m
+[0m--- (inlined by) [0;33mblock_locate_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m619[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m444[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x40389e3e: [0;33mblock_set_prev_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_block_functions.h[0m[0m:[1;31m123[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m553[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40389e3e: [0;33mblock_set_prev_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_block_functions.h[0m[0m:[1;31m123[0m
+[0m--- (inlined by) [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m553[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40385c6c: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m597[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385c58: [0;33mxPortSetInterruptMaskFromISR[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m492[0m
+[0m--- 0x40385c72: [0;33mvPortEnterCritical[0m[0m at [0;32m/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m603[0m
+[0m--- 0x4038a04b: [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m548[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x4038a04b: [0;33mblock_trim_free[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m548[0m
+[0m--- (inlined by) [0;33mblock_prepare_used[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m631[0m
+[0m--- (inlined by) [0;33mtlsf_malloc[0m[0m at [0;32m/opt/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m445[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/opt/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x40384a3a: [0;33mesp_restart_noos[0m[0m at [0;32m/opt/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/opt/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/opt/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

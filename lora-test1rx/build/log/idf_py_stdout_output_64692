@@ -1,0 +1,1991 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/lora-test1rx/build/lora-test1rx.elf /home/yabi/skool/6900/prototyping/lora-test1rx/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 17 2026 02:57:49[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (31) boot: efuse block revision: v1.2[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0bb70h ( 47984) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0001bb98 vaddr=3fc8d400 size=013a8h (  5032) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001cf48 vaddr=40380000 size=030d0h ( 12496) load[0m
+[0;32mI (107) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1deb8h (122552) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=0003dee0 vaddr=403830d0 size=0a248h ( 41544) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=00048130 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (144) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (144) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Unicore app[0m
+[0;32mI (166) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     lora-temptx[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (179) app_init: Compile time:     Feb 17 2026 02:57:21[0m
+[0;32mI (184) app_init: ELF file SHA256:  f3249e476...[0m
+[0;32mI (189) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (194) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (197) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (212) heap_init: At 3FC8F720 len 000308E0 (194 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (223) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (229) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (235) spi_flash: detected chip: generic[0m
+[0;32mI (238) spi_flash: flash io: dio[0m
+[0;33mW (241) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (253) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (259) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (266) main_task: Started on CPU0[0m
+[0;32mI (276) main_task: Calling app_main()[0m
+[0;32mI (276) i2cdev: [Port 0] First initialization. Configuring bus with SDA=2, SCL=3 (Pullups SCL:0 SDA:0)[0m
+[0;33mW (276) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (296) i2cdev: [Port 0] Successfully installed I2C master bus (Handle: 0x3fc91cd0).[0m
+[0;32mI (306) i2cdev: [0x44 at 0] Device added successfully (Device Handle: 0x3fc921bc, Speed: 1000000 Hz).[0m
+[0;32mI (1266) main_task: Returned from app_main()[0m
+[0;32mI (1386) RYLR998_TX_TEST: Recv from device str: +READY[0m
++ERR=4
++OK
++OK
+
+[0;32mI (3506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (5626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (7746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (9866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (11986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (14106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (16226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (18346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (20466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (22586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (24706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (26826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (28946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (31066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (33186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (35306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (37426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (39546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (41666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (43786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (45906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (48026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (50146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (52266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (54386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (56506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (58626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (60746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (62866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (64986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (67106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (69226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (71346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (73466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (75586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (77706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (79826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (81946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (84066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (86186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (88306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (90426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (92546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (94666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (96786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (98906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (101026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (103146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (105266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (107386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (109506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (111626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (113746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (115866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (117986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (120106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (122226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (124346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (126466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (128586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (130706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (132826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (134946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (137066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (139186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (141306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (143426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (145546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (147666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (149786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (151906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (154026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (156146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (158266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (160386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (162506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (164626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (166746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (168866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (170986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (173106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (175226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (177346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (179466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (181586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (183706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (185826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (187946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (190066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (192186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (194306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (196426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (198546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (200666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (202786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (204906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (207026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (209146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (211266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (213386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (215506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (217626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (219746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (221866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (223986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (226106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (228226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (230346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (232466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (234586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (236706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (238826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (240946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (243066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (245186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (247306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (249426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (251546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (253666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (255786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (257906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (260026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (262146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (264266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (266386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (268506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (270626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (272746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (274866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (276986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (279106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (281226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (283346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (285466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (287586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (289706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (291826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (293946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (296066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (298186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (300306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (302426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (304546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (306666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (308786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (310906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (313026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (315146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (317266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (319386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (321506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (323626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (325746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (327866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (329986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (332106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (334226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (336346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (338466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (340586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (342706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (344826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (346946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (349066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (351186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (353306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (355426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (357546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (359666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (361786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (363906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (366026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (368146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (370266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (372386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (374506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (376626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (378746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (380866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (382986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (385106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (387226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (389346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (391466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (393586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (395706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (397826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (399946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (402066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (404186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (406306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (408426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (410546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (412666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (414786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (416906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (419026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (421146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (423266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (425386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (427506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (429626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (431746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (433866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (435986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (438106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (440226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (442346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (444466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (446586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (448706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (450826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (452946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (455066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (457186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (459306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (461426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (463546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (465666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (467786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (469906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (472026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (474146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (476266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (478386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (480506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (482626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (484746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (486866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (488986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (491106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (493226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (495346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (497466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (499586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (501706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (503826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (505946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (508066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (510186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (512306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (514426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (516546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (518666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (520786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (522906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (525026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (527146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (529266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (531386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (533506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (535626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (537746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (539866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (541986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (544106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (546226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (548346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (550466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (552586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (554706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (556826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (558946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (561066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (563186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (565306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (567426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (569546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (571666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (573786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (575906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (578026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (580146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (582266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (584386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (586506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (588626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (590746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (592866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (594986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (597106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (599226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (601346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (603466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (605586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (607706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (609826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (611946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (614066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (616186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (618306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (620426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (622546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (624666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (626786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (628906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (631026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (633146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (635266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (637386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (639506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (641626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (643746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (645866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (647986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (650106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (652226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (654346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (656466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (658586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (660706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (662826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (664946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (667066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (669186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (671306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (673426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (675546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (677666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (679786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (681906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (684026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (686146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (688266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (690386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (692506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (694626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (696746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (698866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (700986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (703106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (705226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (707346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (709466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (711586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (713706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (715826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (717946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (720066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (722186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (724306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (726426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (728546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (730666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (732786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (734906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (737026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (739146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (741266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (743386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (745506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (747626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (749746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (751866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (753986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (756106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (758226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (760346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (762466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (764586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (766706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (768826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (770946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (773066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (775186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (777306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (779426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (781546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (783666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (785786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (787906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (790026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (792146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (794266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (796386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (798506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (800626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (802746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (804866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (806986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (809106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (811226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (813346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (815466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (817586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (819706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (821826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (823946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (826066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (828186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (830306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (832426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (834546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (836666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (838786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (840906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (843026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (845146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (847266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (849386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (851506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (853626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (855746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (857866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (859986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (862106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (864226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (866346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (868466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (870586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (872706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (874826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (876946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (879066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (881186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (883306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (885426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (887546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (889666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (891786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (893906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (896026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (898146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (900266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (902386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (904506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (906626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (908746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (910866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (912986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (915106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (917226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (919346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (921466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (923586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (925706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (927826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (929946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (932066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (934186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (936306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (938426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (940546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (942666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (944786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (946906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (949026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (951146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (953266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (955386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (957506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (959626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (961746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (963866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (965986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (968106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (970226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (972346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (974466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (976586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (978706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (980826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (982946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (985066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (987186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (989306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (991426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (993546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (995666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (997786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (999906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1002026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1004146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1006266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1008386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1010506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1012626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1014746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1016866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1018986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1021106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1023226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1025346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1027466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1029586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1031706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1033826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1035946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1038066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1040186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1042306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1044426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1046546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1048666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1050786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1052906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1055026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1057146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1059266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1061386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1063506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1065626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1067746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1069866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1071986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1074106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1076226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1078346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1080466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1082586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1084706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1086826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1088946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1091066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1093186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1095306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1097426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1099546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1101666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1103786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1105906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1108026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1110146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1112266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1114386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1116506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1118626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1120746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1122866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1124986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1127106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1129226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1131346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1133466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1135586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1137706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1139826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1141946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1144066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1146186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1148306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1150426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1152546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1154666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1156786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1158906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1161026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1163146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1165266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1167386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1169506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1171626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1173746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1175866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1177986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1180106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1182226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1184346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1186466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1188586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1190706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1192826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1194946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1197066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1199186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1201306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1203426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1205546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1207666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1209786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1211906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1214026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1216146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1218266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1220386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1222506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1224626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1226746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1228866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1230986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1233106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1235226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1237346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1239466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1241586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1243706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1245826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1247946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1250066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1252186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1254306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1256426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1258546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1260666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1262786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1264906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1267026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1269146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1271266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1273386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1275506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1277626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1279746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1281866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1283986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1286106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1288226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1290346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1292466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1294586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1296706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1298826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1300946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1303066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1305186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1307306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1309426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1311546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1313666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1315786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1317906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1320026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1322146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1324266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1326386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1328506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1330626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1332746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1334866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1336986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1339106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1341226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1343346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1345466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1347586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1349706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1351826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1353946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1356066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1358186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1360306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1362426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1364546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1366666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1368786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1370906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1373026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1375146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1377266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1379386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1381506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1383626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1385746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1387866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1389986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1392106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1394226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1396346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1398466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1400586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1402706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1404826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1406946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1409066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1411186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1413306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1415426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1417546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1419666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1421786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1423906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1426026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1428146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1430266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1432386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1434506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1436626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1438746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1440866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1442986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1445106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1447226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1449346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1451466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1453586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1455706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1457826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1459946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1462066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1464186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1466306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1468426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1470546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1472666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1474786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1476906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1479026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1481146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1483266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1485386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1487506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1489626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1491746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1493866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1495986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1498106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1500226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1502346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1504466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1506586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1508706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1510826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1512946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1515066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1517186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1519306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1521426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1523546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1525666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1527786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1529906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1532026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1534146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1536266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1538386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1540506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1542626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1544746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1546866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1548986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1551106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1553226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1555346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1557466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1559586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1561706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1563826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1565946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1568066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1570186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1572306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1574426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1576546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1578666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1580786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1582906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1585026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1587146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1589266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1591386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1593506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1595626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1597746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1599866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1601986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1604106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1606226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1608346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1610466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1612586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1614706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1616826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1618946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1621066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1623186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1625306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1627426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1629546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1631666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1633786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1635906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1638026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1640146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1642266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1644386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1646506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1648626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1650746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1652866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1654986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1657106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1659226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1661346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1663466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1665586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1667706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1669826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1671946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1674066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1676186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1678306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1680426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1682546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1684666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1686786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1688906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1691026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1693146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1695266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1697386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1699506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1701626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1703746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1705866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1707986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1710106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1712226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1714346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1716466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1718586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1720706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1722826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1724946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1727066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1729186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1731306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1733426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1735546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1737666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1739786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1741906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1744026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1746146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1748266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1750386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1752506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1754626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1756746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1758866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1760986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1763106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1765226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1767346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1769466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1771586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1773706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1775826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1777946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1780066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1782186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1784306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1786426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1788546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1790666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1792786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1794906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1797026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1799146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1801266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1803386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1805506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1807626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1809746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1811866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1813986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1816106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1818226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1820346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1822466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1824586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1826706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1828826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1830946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1833066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1835186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1837306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1839426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1841546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1843666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1845786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1847906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1850026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1852146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1854266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1856386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1858506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1860626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1862746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1864866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1866986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1869106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1871226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1873346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1875466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1877586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1879706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1881826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1883946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1886066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1888186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1890306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1892426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1894546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1896666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1898786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1900906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1903026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1905146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1907266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1909386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1911506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1913626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1915746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1917866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1919986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1922106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1924226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1926346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1928466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1930586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1932706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1934826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1936946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1939066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1941186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1943306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1945426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1947546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1949666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1951786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1953906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1956026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1958146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1960266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1962386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1964506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1966626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1968746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1970866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1972986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1975106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1977226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1979346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1981466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1983586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1985706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1987826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1989946) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1992066) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1994186) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1996306) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (1998426) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2000546) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2002666) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2004786) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2006906) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2009026) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2011146) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2013266) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2015386) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2017506) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2019626) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2021746) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2023866) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2025986) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2028106) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2030226) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2032346) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2034466) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2036586) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2038706) RYLR998_TX_TEST: Recv from device str: +OK[0m
+
+[0;32mI (2040826) RYLR998_TX_TEST: Recv from device str: +OK[0m
+

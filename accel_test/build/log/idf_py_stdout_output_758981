@@ -1,0 +1,258 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/accel_test/build/accel_test.elf /home/yabi/skool/6900/prototyping/accel_test/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+u_start: Unicore app
+[0;32mI (160) cpu_start:�ESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 17 2026 01:58:22[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09d8ch ( 40332) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=00019db4 vaddr=3fc8d400 size=013b8h (  5048) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b174 vaddr=40380000 size=04ea4h ( 20132) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=16820h ( 92192) map[0m
+[0;32mI (127) esp_image: segment 4: paddr=00036848 vaddr=40384ea4 size=08488h ( 33928) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003ecd8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (138) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Unicore app[0m
+[0;32mI (160) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (160) cpu_start: Pro cpu start user code[0m
+[0;32mI (160) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (162) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     accel_test[0m
+[0;32mI (170) app_init: App version:      1[0m
+[0;32mI (174) app_init: Compile time:     Feb 17 2026 01:58:19[0m
+[0;32mI (179) app_init: ELF file SHA256:  eee12ccf8...[0m
+[0;32mI (183) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (192) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC8F6B0 len 00030950 (194 KiB): RAM[0m
+[0;32mI (211) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (217) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (223) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;33mW (235) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (270) main_task: Calling app_main()[0m
+[0;32mI (270) main_task: Returned from app_main()[0m
+[0;32mI (280) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (280) ACCEL_TEST: gyro_x:0.82, gyro_y:-1.31, gyro_z:6.66[0m
+[0;32mI (290) ACCEL_TEST: roll:0.93, pitch:0.08[0m
+[0;32mI (790) ACCEL_TEST: acce_x:0.01, acce_y:0.01, acce_z:0.99[0m
+[0;32mI (790) ACCEL_TEST: gyro_x:0.87, gyro_y:-1.45, gyro_z:6.67[0m
+[0;32mI (790) ACCEL_TEST: roll:1.37, pitch:-0.65[0m
+[0;32mI (1290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (1290) ACCEL_TEST: gyro_x:0.81, gyro_y:-1.36, gyro_z:6.58[0m
+[0;32mI (1290) ACCEL_TEST: roll:1.77, pitch:-1.31[0m
+[0;32mI (1790) ACCEL_TEST: acce_x:0.01, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (1790) ACCEL_TEST: gyro_x:0.72, gyro_y:-1.33, gyro_z:6.76[0m
+[0;32mI (1790) ACCEL_TEST: roll:2.12, pitch:-1.95[0m
+[0;32mI (2290) ACCEL_TEST: acce_x:0.01, acce_y:0.01, acce_z:1.00[0m
+[0;32mI (2290) ACCEL_TEST: gyro_x:0.84, gyro_y:-1.31, gyro_z:6.47[0m
+[0;32mI (2290) ACCEL_TEST: roll:2.52, pitch:-2.58[0m
+[0;32mI (2790) ACCEL_TEST: acce_x:0.01, acce_y:0.01, acce_z:1.00[0m
+[0;32mI (2790) ACCEL_TEST: gyro_x:0.90, gyro_y:-1.19, gyro_z:6.61[0m
+[0;32mI (2790) ACCEL_TEST: roll:2.95, pitch:-3.14[0m
+[0;32mI (3290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (3290) ACCEL_TEST: gyro_x:0.85, gyro_y:-1.39, gyro_z:6.52[0m
+[0;32mI (3290) ACCEL_TEST: roll:3.35, pitch:-3.79[0m
+[0;32mI (3790) ACCEL_TEST: acce_x:0.00, acce_y:0.01, acce_z:1.00[0m
+[0;32mI (3790) ACCEL_TEST: gyro_x:0.67, gyro_y:-1.08, gyro_z:6.67[0m
+[0;32mI (3790) ACCEL_TEST: roll:3.66, pitch:-4.29[0m
+[0;32mI (4290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (4290) ACCEL_TEST: gyro_x:0.87, gyro_y:-1.24, gyro_z:6.55[0m
+[0;32mI (4290) ACCEL_TEST: roll:4.06, pitch:-4.85[0m
+[0;32mI (4790) ACCEL_TEST: acce_x:-0.31, acce_y:-0.11, acce_z:1.05[0m
+[0;32mI (4790) ACCEL_TEST: gyro_x:1.01, gyro_y:-2.00, gyro_z:54.52[0m
+[0;32mI (4790) ACCEL_TEST: roll:4.46, pitch:-5.96[0m
+[0;32mI (5290) ACCEL_TEST: acce_x:-0.30, acce_y:-0.14, acce_z:0.99[0m
+[0;32mI (5290) ACCEL_TEST: gyro_x:14.75, gyro_y:96.44, gyro_z:-6.69[0m
+[0;32mI (5290) ACCEL_TEST: roll:11.64, pitch:41.67[0m
+[0;32mI (5790) ACCEL_TEST: acce_x:-0.97, acce_y:0.05, acce_z:0.36[0m
+[0;32mI (5790) ACCEL_TEST: gyro_x:9.36, gyro_y:89.28, gyro_z:-18.76[0m
+[0;32mI (5790) ACCEL_TEST: roll:16.24, pitch:84.75[0m
+[0;32mI (6290) ACCEL_TEST: acce_x:-1.07, acce_y:-0.05, acce_z:-0.30[0m
+[0;32mI (6290) ACCEL_TEST: gyro_x:0.58, gyro_y:72.81, gyro_z:5.28[0m
+[0;32mI (6290) ACCEL_TEST: roll:14.65, pitch:118.89[0m
+[0;32mI (6790) ACCEL_TEST: acce_x:-1.00, acce_y:0.07, acce_z:0.72[0m
+[0;32mI (6790) ACCEL_TEST: gyro_x:-7.07, gyro_y:-417.27, gyro_z:-75.94[0m
+[0;32mI (6790) ACCEL_TEST: roll:11.07, pitch:-89.37[0m
+[0;32mI (7290) ACCEL_TEST: acce_x:0.50, acce_y:-0.05, acce_z:0.82[0m
+[0;32mI (7290) ACCEL_TEST: gyro_x:10.82, gyro_y:-108.46, gyro_z:8.49[0m
+[0;32mI (7290) ACCEL_TEST: roll:16.28, pitch:-141.85[0m
+[0;32mI (7790) ACCEL_TEST: acce_x:0.88, acce_y:0.06, acce_z:0.49[0m
+[0;32mI (7790) ACCEL_TEST: gyro_x:-2.96, gyro_y:-7.85, gyro_z:18.55[0m
+[0;32mI (7790) ACCEL_TEST: roll:14.71, pitch:-143.71[0m
+[0;32mI (8290) ACCEL_TEST: acce_x:-0.18, acce_y:-0.02, acce_z:1.10[0m
+[0;32mI (8290) ACCEL_TEST: gyro_x:7.74, gyro_y:89.13, gyro_z:-7.47[0m
+[0;32mI (8290) ACCEL_TEST: roll:18.39, pitch:-98.25[0m
+[0;32mI (8790) ACCEL_TEST: acce_x:-0.03, acce_y:0.02, acce_z:0.95[0m
+[0;32mI (8790) ACCEL_TEST: gyro_x:-0.18, gyro_y:-10.05, gyro_z:14.23[0m
+[0;32mI (8790) ACCEL_TEST: roll:18.13, pitch:-102.26[0m
+[0;32mI (9290) ACCEL_TEST: acce_x:-0.00, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (9290) ACCEL_TEST: gyro_x:1.31, gyro_y:-0.15, gyro_z:1.77[0m
+[0;32mI (9290) ACCEL_TEST: roll:18.61, pitch:-101.31[0m
+[0;32mI (9790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (9790) ACCEL_TEST: gyro_x:0.84, gyro_y:-1.28, gyro_z:6.58[0m
+[0;32mI (9790) ACCEL_TEST: roll:18.85, pitch:-100.93[0m
+[0;32mI (10290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (10290) ACCEL_TEST: gyro_x:0.76, gyro_y:-1.25, gyro_z:6.53[0m
+[0;32mI (10290) ACCEL_TEST: roll:19.05, pitch:-100.54[0m
+[0;32mI (10790) ACCEL_TEST: acce_x:0.00, acce_y:0.01, acce_z:1.00[0m
+[0;32mI (10790) ACCEL_TEST: gyro_x:0.87, gyro_y:-1.22, gyro_z:6.64[0m
+[0;32mI (10790) ACCEL_TEST: roll:19.30, pitch:-100.14[0m
+[0;32mI (11290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (11290) ACCEL_TEST: gyro_x:0.69, gyro_y:-1.21, gyro_z:6.67[0m
+[0;32mI (11290) ACCEL_TEST: roll:19.45, pitch:-99.73[0m
+[0;32mI (11790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (11790) ACCEL_TEST: gyro_x:0.69, gyro_y:-1.05, gyro_z:6.53[0m
+[0;32mI (11790) ACCEL_TEST: roll:19.61, pitch:-99.25[0m
+[0;32mI (12290) ACCEL_TEST: acce_x:-0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (12290) ACCEL_TEST: gyro_x:0.89, gyro_y:-0.75, gyro_z:6.67[0m
+[0;32mI (12290) ACCEL_TEST: roll:19.86, pitch:-98.63[0m
+[0;32mI (12790) ACCEL_TEST: acce_x:-0.01, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (12790) ACCEL_TEST: gyro_x:0.96, gyro_y:-1.62, gyro_z:6.55[0m
+[0;32mI (12790) ACCEL_TEST: roll:20.15, pitch:-98.45[0m
+[0;32mI (13290) ACCEL_TEST: acce_x:-0.54, acce_y:0.27, acce_z:1.14[0m
+[0;32mI (13290) ACCEL_TEST: gyro_x:6.47, gyro_y:168.93, gyro_z:-14.56[0m
+[0;32mI (13290) ACCEL_TEST: roll:23.28, pitch:-14.10[0m
+[0;32mI (13790) ACCEL_TEST: acce_x:-0.66, acce_y:-0.01, acce_z:0.90[0m
+[0;32mI (13790) ACCEL_TEST: gyro_x:14.56, gyro_y:-20.00, gyro_z:16.06[0m
+[0;32mI (13790) ACCEL_TEST: roll:30.26, pitch:-24.22[0m
+[0;32mI (14290) ACCEL_TEST: acce_x:-0.66, acce_y:0.10, acce_z:0.85[0m
+[0;32mI (14290) ACCEL_TEST: gyro_x:-1.51, gyro_y:-13.83, gyro_z:10.92[0m
+[0;32mI (14290) ACCEL_TEST: roll:29.27, pitch:-31.21[0m
+[0;32mI (14790) ACCEL_TEST: acce_x:-0.75, acce_y:0.01, acce_z:0.80[0m
+[0;32mI (14790) ACCEL_TEST: gyro_x:6.50, gyro_y:6.93, gyro_z:3.97[0m
+[0;32mI (14790) ACCEL_TEST: roll:32.21, pitch:-27.90[0m
+[0;32mI (15290) ACCEL_TEST: acce_x:-0.76, acce_y:0.03, acce_z:0.74[0m
+[0;32mI (15290) ACCEL_TEST: gyro_x:2.17, gyro_y:-7.28, gyro_z:12.95[0m
+[0;32mI (15290) ACCEL_TEST: roll:32.98, pitch:-31.68[0m
+[0;32mI (15790) ACCEL_TEST: acce_x:-0.75, acce_y:0.03, acce_z:0.72[0m
+[0;32mI (15790) ACCEL_TEST: gyro_x:-2.63, gyro_y:-1.40, gyro_z:8.95[0m
+[0;32mI (15790) ACCEL_TEST: roll:31.38, pitch:-32.52[0m
+[0;32mI (16290) ACCEL_TEST: acce_x:-0.01, acce_y:0.09, acce_z:1.01[0m
+[0;32mI (16290) ACCEL_TEST: gyro_x:-1.62, gyro_y:-1.65, gyro_z:8.00[0m
+[0;32mI (16290) ACCEL_TEST: roll:30.32, pitch:-33.02[0m
+[0;32mI (16790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:0.99[0m
+[0;32mI (16790) ACCEL_TEST: gyro_x:0.84, gyro_y:-1.33, gyro_z:6.56[0m
+[0;32mI (16790) ACCEL_TEST: roll:30.44, pitch:-33.35[0m
+[0;32mI (17290) ACCEL_TEST: acce_x:-0.00, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (17290) ACCEL_TEST: gyro_x:0.79, gyro_y:-1.28, gyro_z:6.64[0m
+[0;32mI (17290) ACCEL_TEST: roll:30.54, pitch:-33.65[0m
+[0;32mI (17790) ACCEL_TEST: acce_x:-0.17, acce_y:-0.05, acce_z:0.90[0m
+[0;32mI (17790) ACCEL_TEST: gyro_x:-17.88, gyro_y:32.46, gyro_z:-2.85[0m
+[0;32mI (17790) ACCEL_TEST: roll:21.35, pitch:-17.36[0m
+[0;32mI (18290) ACCEL_TEST: acce_x:-0.23, acce_y:-0.13, acce_z:1.07[0m
+[0;32mI (18290) ACCEL_TEST: gyro_x:-2.29, gyro_y:4.11, gyro_z:10.95[0m
+[0;32mI (18290) ACCEL_TEST: roll:19.93, pitch:-15.27[0m
+[0;32mI (18790) ACCEL_TEST: acce_x:-0.31, acce_y:-0.08, acce_z:0.87[0m
+[0;32mI (18790) ACCEL_TEST: gyro_x:-3.04, gyro_y:2.37, gyro_z:10.27[0m
+[0;32mI (18790) ACCEL_TEST: roll:18.18, pitch:-14.15[0m
+[0;32mI (19290) ACCEL_TEST: acce_x:-0.05, acce_y:0.15, acce_z:1.07[0m
+[0;32mI (19290) ACCEL_TEST: gyro_x:-9.73, gyro_y:0.98, gyro_z:10.49[0m
+[0;32mI (19290) ACCEL_TEST: roll:13.27, pitch:-13.55[0m
+[0;32mI (19790) ACCEL_TEST: acce_x:-0.04, acce_y:0.05, acce_z:1.01[0m
+[0;32mI (19790) ACCEL_TEST: gyro_x:1.21, gyro_y:-1.92, gyro_z:6.43[0m
+[0;32mI (19790) ACCEL_TEST: roll:13.76, pitch:-14.39[0m
+[0;32mI (20290) ACCEL_TEST: acce_x:-0.11, acce_y:0.11, acce_z:0.89[0m
+[0;32mI (20290) ACCEL_TEST: gyro_x:-25.01, gyro_y:19.80, gyro_z:16.63[0m
+[0;32mI (20290) ACCEL_TEST: roll:1.31, pitch:-4.52[0m
+[0;32mI (20790) ACCEL_TEST: acce_x:-0.13, acce_y:0.22, acce_z:1.00[0m
+[0;32mI (20790) ACCEL_TEST: gyro_x:16.11, gyro_y:-15.98, gyro_z:6.29[0m
+[0;32mI (20790) ACCEL_TEST: roll:9.40, pitch:-12.45[0m
+[0;32mI (21290) ACCEL_TEST: acce_x:-0.18, acce_y:0.16, acce_z:0.98[0m
+[0;32mI (21290) ACCEL_TEST: gyro_x:5.22, gyro_y:-1.24, gyro_z:7.10[0m
+[0;32mI (21290) ACCEL_TEST: roll:11.98, pitch:-13.05[0m
+[0;32mI (21790) ACCEL_TEST: acce_x:-0.08, acce_y:0.12, acce_z:1.01[0m
+[0;32mI (21790) ACCEL_TEST: gyro_x:2.79, gyro_y:-3.86, gyro_z:1.44[0m
+[0;32mI (21790) ACCEL_TEST: roll:13.31, pitch:-14.87[0m
+[0;32mI (22290) ACCEL_TEST: acce_x:-0.13, acce_y:0.14, acce_z:0.95[0m
+[0;32mI (22290) ACCEL_TEST: gyro_x:4.11, gyro_y:-0.17, gyro_z:6.15[0m
+[0;32mI (22290) ACCEL_TEST: roll:15.29, pitch:-14.88[0m
+[0;32mI (22790) ACCEL_TEST: acce_x:-0.11, acce_y:0.13, acce_z:1.00[0m
+[0;32mI (22790) ACCEL_TEST: gyro_x:10.76, gyro_y:-12.14, gyro_z:-1.25[0m
+[0;32mI (22790) ACCEL_TEST: roll:20.54, pitch:-20.81[0m
+[0;32mI (23290) ACCEL_TEST: acce_x:0.08, acce_y:0.12, acce_z:0.77[0m
+[0;32mI (23290) ACCEL_TEST: gyro_x:15.34, gyro_y:-9.04, gyro_z:15.22[0m
+[0;32mI (23290) ACCEL_TEST: roll:28.02, pitch:-25.02[0m
+[0;32mI (23790) ACCEL_TEST: acce_x:-0.40, acce_y:-0.55, acce_z:-0.60[0m
+[0;32mI (23790) ACCEL_TEST: gyro_x:-146.76, gyro_y:-2.60, gyro_z:0.46[0m
+[0;32mI (23790) ACCEL_TEST: roll:-46.28, pitch:-27.51[0m
+[0;32mI (24290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.02[0m
+[0;32mI (24290) ACCEL_TEST: gyro_x:0.81, gyro_y:-1.59, gyro_z:6.84[0m
+[0;32mI (24290) ACCEL_TEST: roll:-45.41, pitch:-28.02[0m
+[0;32mI (24790) ACCEL_TEST: acce_x:0.00, acce_y:0.01, acce_z:1.00[0m
+[0;32mI (24790) ACCEL_TEST: gyro_x:0.89, gyro_y:-1.33, gyro_z:6.47[0m
+[0;32mI (24790) ACCEL_TEST: roll:-44.51, pitch:-28.40[0m
+[0;32mI (25290) ACCEL_TEST: acce_x:-0.00, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (25290) ACCEL_TEST: gyro_x:0.90, gyro_y:-1.25, gyro_z:6.52[0m
+[0;32mI (25290) ACCEL_TEST: roll:-43.61, pitch:-28.74[0m
+[0;32mI (25790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (25790) ACCEL_TEST: gyro_x:0.87, gyro_y:-1.33, gyro_z:6.72[0m
+[0;32mI (25790) ACCEL_TEST: roll:-42.73, pitch:-29.10[0m
+[0;32mI (26290) ACCEL_TEST: acce_x:-0.01, acce_y:0.03, acce_z:1.01[0m
+[0;32mI (26290) ACCEL_TEST: gyro_x:1.28, gyro_y:2.63, gyro_z:12.03[0m
+[0;32mI (26290) ACCEL_TEST: roll:-41.65, pitch:-27.52[0m
+[0;32mI (26790) ACCEL_TEST: acce_x:-0.35, acce_y:-0.14, acce_z:0.96[0m
+[0;32mI (26790) ACCEL_TEST: gyro_x:12.96, gyro_y:115.68, gyro_z:19.34[0m
+[0;32mI (26790) ACCEL_TEST: roll:-34.90, pitch:29.82[0m
+[0;32mI (27290) ACCEL_TEST: acce_x:-0.97, acce_y:-0.06, acce_z:0.39[0m
+[0;32mI (27290) ACCEL_TEST: gyro_x:0.89, gyro_y:12.92, gyro_z:-23.16[0m
+[0;32mI (27290) ACCEL_TEST: roll:-34.21, pitch:35.23[0m
+[0;32mI (27790) ACCEL_TEST: acce_x:-0.62, acce_y:-0.27, acce_z:0.70[0m
+[0;32mI (27790) ACCEL_TEST: gyro_x:25.18, gyro_y:-111.19, gyro_z:7.85[0m
+[0;32mI (27790) ACCEL_TEST: roll:-21.62, pitch:-20.58[0m
+[0;32mI (28290) ACCEL_TEST: acce_x:0.01, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (28290) ACCEL_TEST: gyro_x:0.85, gyro_y:-1.22, gyro_z:6.78[0m
+[0;32mI (28290) ACCEL_TEST: roll:-20.97, pitch:-20.97[0m
+[0;32mI (28790) ACCEL_TEST: acce_x:0.01, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (28790) ACCEL_TEST: gyro_x:0.73, gyro_y:-1.07, gyro_z:6.50[0m
+[0;32mI (28790) ACCEL_TEST: roll:-20.39, pitch:-21.29[0m
+[0;32mI (29290) ACCEL_TEST: acce_x:-0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (29290) ACCEL_TEST: gyro_x:0.89, gyro_y:-1.27, gyro_z:6.38[0m
+[0;32mI (29290) ACCEL_TEST: roll:-19.73, pitch:-21.71[0m
+[0;32mI (29790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (29790) ACCEL_TEST: gyro_x:0.85, gyro_y:-1.15, gyro_z:6.52[0m
+[0;32mI (29790) ACCEL_TEST: roll:-19.10, pitch:-22.05[0m
+[0;32mI (30290) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (30290) ACCEL_TEST: gyro_x:0.76, gyro_y:-1.21, gyro_z:6.52[0m
+[0;32mI (30290) ACCEL_TEST: roll:-18.52, pitch:-22.43[0m
+[0;32mI (30790) ACCEL_TEST: acce_x:0.00, acce_y:0.02, acce_z:1.01[0m
+[0;32mI (30790) ACCEL_TEST: gyro_x:0.76, gyro_y:-1.47, gyro_z:6.72[0m
+[0;32mI (30790) ACCEL_TEST: roll:-17.95, pitch:-22.93[0m
+[0;32mI (31290) ACCEL_TEST: acce_x:0.01, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (31290) ACCEL_TEST: gyro_x:0.70, gyro_y:-1.34, gyro_z:6.56[0m
+[0;32mI (31290) ACCEL_TEST: roll:-17.41, pitch:-23.36[0m
+[0;32mI (31790) ACCEL_TEST: acce_x:0.00, acce_y:0.01, acce_z:1.01[0m
+[0;32mI (31790) ACCEL_TEST: gyro_x:0.70, gyro_y:-1.36, gyro_z:6.50[0m
+[0;32mI (31790) ACCEL_TEST: roll:-16.88, pitch:-23.80[0m
+[0;32mI (32290) ACCEL_TEST: acce_x:0.01, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (32290) ACCEL_TEST: gyro_x:0.82, gyro_y:-1.15, gyro_z:6.50[0m
+[0;32mI (32290) ACCEL_TEST: roll:-16.29, pitch:-24.13[0m
+[0;32mI (32790) ACCEL_TEST: acce_x:-0.01, acce_y:0.02, acce_z:1.00[0m
+[0;32mI (32790) ACCEL_TEST: gyro_x:0.98, gyro_y:-0.75, gyro_z:6.69[0m
+[0;32mI (32790) ACCEL_TEST: roll:-15.63, pitch:-24.26[0m

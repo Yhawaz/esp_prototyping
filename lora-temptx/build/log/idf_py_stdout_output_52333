@@ -1,0 +1,201 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/lora-temptx/build/lora-temptx.elf /home/yabi/skool/6900/prototyping/lora-temptx/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+[0;32mI (166) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000�ESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 17 2026 02:57:49[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (31) boot: efuse block revision: v1.2[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0bb70h ( 47984) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0001bb98 vaddr=3fc8d400 size=013a8h (  5032) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001cf48 vaddr=40380000 size=030d0h ( 12496) load[0m
+[0;32mI (107) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1deb4h (122548) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=0003dedc vaddr=403830d0 size=0a248h ( 41544) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=0004812c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (144) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (144) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Unicore app[0m
+[0;32mI (166) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     lora-temptx[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (179) app_init: Compile time:     Feb 17 2026 02:57:21[0m
+[0;32mI (184) app_init: ELF file SHA256:  08f867314...[0m
+[0;32mI (189) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (194) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (197) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (212) heap_init: At 3FC8F720 len 000308E0 (194 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (223) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (229) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (235) spi_flash: detected chip: generic[0m
+[0;32mI (238) spi_flash: flash io: dio[0m
+[0;33mW (241) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (253) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (259) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (266) main_task: Started on CPU0[0m
+[0;32mI (276) main_task: Calling app_main()[0m
+[0;32mI (276) i2cdev: [Port 0] First initialization. Configuring bus with SDA=2, SCL=3 (Pullups SCL:0 SDA:0)[0m
+[0;33mW (276) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (296) i2cdev: [Port 0] Successfully installed I2C master bus (Handle: 0x3fc91cd0).[0m
+[0;32mI (306) i2cdev: [0x44 at 0] Device added successfully (Device Handle: 0x3fc921bc, Speed: 1000000 Hz).[0m
+[0;32mI (1266) main_task: Returned from app_main()[0m
+[0;32mI (1386) RYLR998_TX_TEST: Recv from device str: +READY[0m
++ERR=4
++OK
++OK
+
+Guru Meditation Error: Core  0 panic'ed (Stack protection fault). 
+
+Detected in task "tx_task" at 0x40385c6c
+Stack pointer: 0x3fc93340
+Stack bounds: 0x3fc9334c - 0x3fc93b40
+
+
+Core  0 register dump:
+MEPC    : 0x40385c58  RA      : 0x40385c72  SP      : 0x3fc93340  GP      : 0x3fc8dc00  
+TP      : 0x3fc93b40  T0      : 0x00000000  T1      : 0x80000000  T2      : 0x00000000  
+S0/FP   : 0x3fc8f720  S1      : 0x00000084  A0      : 0x00000001  A1      : 0x00000084  
+A2      : 0x00000004  A3      : 0x00000004  A4      : 0x600c2000  A5      : 0x00000081  
+A6      : 0x00000000  A7      : 0x00088a6b  S2      : 0x00001800  S3      : 0x3fc9358c  
+S4      : 0x40388a6b  S5      : 0x40388a6b  S6      : 0x3fc936f4  S7      : 0x00000066  
+S8      : 0x00000002  S9      : 0x00000100  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x80000000  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x0000001b  MTVAL   : 0x00008082  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/yabi/skool/6900/prototyping/lora-temptx/build/bootloader/bootloader.elf"
+xPortSetInterruptMaskFromISR () at /opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:491
+491	    return prev_int_level;
+#0  xPortSetInterruptMaskFromISR () at /opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:491
+#1  0x40385c72 in vPortEnterCritical () at /opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:602
+#2  0x4038958c in multi_heap_internal_lock (heap=heap@entry=0x3fc8f720) at /opt/esp-idf/components/heap/multi_heap.c:171
+#3  0x403895c0 in multi_heap_malloc_impl (heap=0x3fc8f720, size=132) at /opt/esp-idf/components/heap/multi_heap.c:215
+#4  0x40380768 in aligned_or_unaligned_alloc (heap=<optimized out>, size=<optimized out>, alignment=<optimized out>, offset=offset@entry=0) at /opt/esp-idf/components/heap/heap_caps_base.c:93
+#5  0x40380878 in heap_caps_aligned_alloc_base (alignment=<optimized out>, alignment@entry=4, size=<optimized out>, size@entry=132, caps=<optimized out>, caps@entry=6144) at /opt/esp-idf/components/heap/heap_caps_base.c:175
+#6  0x403808c2 in heap_caps_malloc_base (size=size@entry=132, caps=caps@entry=6144) at /opt/esp-idf/components/heap/heap_caps_base.c:202
+#7  0x40380508 in heap_caps_malloc (size=132, caps=caps@entry=6144) at /opt/esp-idf/components/heap/heap_caps.c:84
+#8  0x40380564 in heap_caps_malloc_default (size=size@entry=132) at /opt/esp-idf/components/heap/heap_caps.c:110
+#9  0x4038b5be in calloc (nmemb=nmemb@entry=4, size=size@entry=33) at /opt/esp-idf/components/newlib/src/heap.c:46
+#10 0x4038b620 in _calloc_r (r=r@entry=0x3fc93ba8, nmemb=nmemb@entry=4, size=size@entry=33) at /opt/esp-idf/components/newlib/src/heap.c:72
+#11 0x42018f64 in _Balloc (ptr=ptr@entry=0x3fc93ba8, k=k@entry=1) at /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdlib/mprec.c:111
+#12 0x4201970a in __d2b (ptr=ptr@entry=0x3fc93ba8, _d=<optimized out>, e=e@entry=0x3fc9358c, bits=bits@entry=0x3fc93588) at /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdlib/mprec.c:783
+#13 0x42018222 in _dtoa_r (ptr=ptr@entry=0x3fc93ba8, _d=<optimized out>, mode=3, ndigits=ndigits@entry=2, decpt=decpt@entry=0x3fc936c8, sign=sign@entry=0x3fc936cc, rve=rve@entry=0x3fc936d8) at /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdlib/dtoa.c:292
+#14 0x42013df0 in cvt (data=0x3fc93ba8, value=24.540702819824219, ndigits=2, flags=256, sign=<synthetic pointer>, decpt=0x3fc936c8, ch=102, length=<synthetic pointer>, buf=0x3c025058 "") at /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1870
+#15 _svfprintf_r (data=<optimized out>, fp=<optimized out>, fmt0=<optimized out>, ap=<optimized out>) at /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1307
+#16 0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: 08f867314
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40384a3a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Feb 17 2026 02:57:49[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (36) boot: efuse block revision: v1.2[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0bb70h ( 47984) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001bb98 vaddr=3fc8d400 size=013a8h (  5032) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001cf48 vaddr=40380000 size=030d0h ( 12496) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1deb4h (122548) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=0003dedc vaddr=403830d0 size=0a248h ( 41544) load[0m
+[0;32mI (145) esp_image: segment 5: paddr=0004812c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (149) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (173) app_init: Application information:[0m
+[0;32mI (177) app_init: Project name:     lora-temptx[0m
+[0;32mI (181) app_init: App version:      1[0m
+[0;32mI (184) app_init: Compile time:     Feb 17 2026 02:57:21[0m
+[0;32mI (189) app_init: ELF file SHA256:  08f867314...[0m
+[0;32mI (194) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (199) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (202) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (206) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (210) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (217) heap_init: At 3FC8F720 len 000308E0 (194 KiB): RAM[0m
+[0;32mI (222) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (228) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (234) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (240) spi_flash: detected chip: generic[0m
+[0;32mI (243) spi_flash: flash io: dio[0m
+[0;33mW (246) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (258) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (264) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) i2cdev: [Port 0] First initialization. Configuring bus with SDA=2, SCL=3 (Pullups SCL:0 SDA:0)[0m
+[0;33mW (281) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (301) i2cdev: [Port 0] Successfully installed I2C master bus (Handle: 0x3fc91cd0).[0m
+[0;32mI (311) i2cdev: [0x44 at 0] Device added successfully (Device Handle: 0x3fc921bc, Speed: 1000000 Hz).[0m
+[0;32mI (1271) main_task: Returned from app_main()[0m
+[0;32mI (1391) RYLR998_TX_TEST: Recv from device str: +READY[0m
++ERR=4
++OK
++OK
+
+Guru Meditation Error: Core  0 panic'ed (Stack protection fault). 
+
+Detected in task "tx_task" at 0x40385c6c
+Stack pointer: 0x3fc93340
+Stack bounds: 0x3fc9334c - 0x3fc93b40
+
+
+Core  0 register dump:
+MEPC    : 0x40385c58  RA      : 0x40385c72  SP      : 0x3fc93340  GP      : 0x3fc8dc00  
+TP      : 0x3fc93b40  T0      : 0x00000000  T1      : 0x80000000  T2      : 0x00000000  
+S0/FP   : 0x3fc8f720  S1      : 0x00000084  A0      : 0x00000001  A1      : 0x00000084  
+A2      : 0x00000004  A3      : 0x00000004  A4      : 0x600c2000  A5      : 0x00000081  
+A6      : 0x00000000  A7      : 0x00088dd6  S2      : 0x00001800  S3      : 0x3fc9358c  
+S4      : 0x40388dd6  S5      : 0x40388dd6  S6      : 0x3fc936f4  S7      : 0x00000066  
+S8      : 0x00000002  S9      : 0x00000100  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x80000000  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x0000001b  MTVAL   : 0x00008082  
+MHARTID : 0x00000000  
+

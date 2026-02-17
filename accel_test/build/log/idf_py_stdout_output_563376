@@ -1,0 +1,58 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/yabi/skool/6900/prototyping/accel_test/build/bootloader/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/yabi/skool/6900/prototyping/accel_test/build/bootloader/bootloader.bin
+Bootloader binary size 0x5270 bytes. 0x2d90 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/accel_test.c.obj
+[4/10] Completed 'bootloader'
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable accel_test.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /home/yabi/skool/6900/prototyping/accel_test/build/accel_test.bin
+[9/10] cd /home/yabi/skool/6900/prototyping/accel_test/build/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/yabi/skool/6900/prototyping/accel_test/build/partition_table/partition-table.bin /home/yabi/skool/6900/prototyping/accel_test/build/accel_test.bin
+accel_test.bin binary size 0x2ed20 bytes. Smallest app partition is 0x100000 bytes. 0xd12e0 bytes (82%) free.
+[9/10] cd /opt/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/opt/esp-idf -D "SERIAL_TOOL=/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python;;/opt/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/yabi/skool/6900/prototyping/accel_test/build -P /opt/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 accel_test.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: ec:da:3b:12:55:2c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0003efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21104 bytes to 13265...
+Writing at 0x00000000... (100 %)
+Wrote 21104 bytes (13265 compressed) at 0x00000000 in 0.7 seconds (effective 243.0 kbit/s)...
+Hash of data verified.
+Compressed 191776 bytes to 101500...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001b281... (28 %)
+Writing at 0x000216e1... (42 %)
+Writing at 0x00028757... (57 %)
+Writing at 0x0002ffb8... (71 %)
+Writing at 0x0003620b... (85 %)
+Writing at 0x0003d3cf... (100 %)
+Wrote 191776 bytes (101500 compressed) at 0x00010000 in 3.5 seconds (effective 440.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 402.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
