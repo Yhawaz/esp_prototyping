@@ -10,6 +10,7 @@
 
 static const char *TAG = "RYLR998_RX_TEST";
 
+
 //buncha variavbles for the mpu6050
 static mpu6050_handle_t mpu6050_dev = NULL;
 static mpu6050_acce_value_t acce;
@@ -19,7 +20,8 @@ static complimentary_angle_t complimentary_angle;
 i2c_port_t meow2c = I2C_NUM_0;
 
 #define BUF_SIZE (1024)
-#define ECHO_TASK_STACK_SIZE   2048
+#define ECHO_TASK_STACK_SIZE 2048
+#define RX_POLL_TIMEOUT_MS 3000  
 
 bool lora_working;
 
@@ -106,23 +108,27 @@ static void rx_init(){
 //        vTaskDelay(3000 / portTICK_PERIOD_MS); 
 //    }
 }
-static void rx_task(){
-    int len=0;
-    int timeout=0;
-    char *data = (char *) malloc(BUF_SIZE);
-    while(!len){
-        timeout++;
+
+
+static void rx_task() {
+    int len = 0;
+    int elapsed_ms = 0;
+    char data[BUF_SIZE];  
+
+    while (elapsed_ms < RX_POLL_TIMEOUT_MS) {
         len = uart_read_bytes(UART_NUM_1, data, (BUF_SIZE - 1), 20 / portTICK_PERIOD_MS);
         if (len) {
-            lora_working=true;
+            lora_working = true;
             data[len] = '\0';
-            ESP_LOGI(TAG, "Recv from device str: %s", (char *) data);
-        }else{
-            lora_working=false;
+            ESP_LOGI(TAG, "Recv from device str: %s", data);
+            return;
         }
-        vTaskDelay(100 / portTICK_PERIOD_MS); // Delay for 300 millisecond
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+        elapsed_ms += 100;
     }
 
+    lora_working = false;
+    ESP_LOGW(TAG, "RX timed out after %d ms", RX_POLL_TIMEOUT_MS);
 }
 
 static void flash_task(void *args){
