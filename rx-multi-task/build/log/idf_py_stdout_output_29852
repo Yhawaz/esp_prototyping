@@ -1,0 +1,288 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/rx-multi-task/build/rx-multi-task.elf /home/yabi/skool/6900/prototyping/rx-multi-task/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb 17 2026 10:14:24[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a524h ( 42276) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001a54c vaddr=3fc8d800 size=013b8h (  5048) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b90c vaddr=40380000 size=0470ch ( 18188) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18d70h (101744) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=00038d98 vaddr=4038470c size=08f8ch ( 36748) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00041d2c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (162) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (164) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     rx-multi-task[0m
+[0;32mI (172) app_init: App version:      5871c18-dirty[0m
+[0;32mI (177) app_init: Compile time:     Feb 24 2026 11:08:31[0m
+[0;32mI (182) app_init: ELF file SHA256:  009efab24...[0m
+[0;32mI (186) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (191) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (195) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (209) heap_init: At 3FC8FAB0 len 00030550 (193 KiB): RAM[0m
+[0;32mI (214) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (232) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (250) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (266) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (273) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+[0;32mI (1273) main_task: Returned from app_main()[0m
+[0;32mI (1293) RYLR998_RX_TEST: Recv from device str: +OK[0m
++OK
++OK
++OK
+
+[0;32mI (4313) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.32,HUM=34.02,-28,8[0m
++RCV=0,20,TEMP=23.31,HUM=34.02,-28,8
+
+[0;32mI (7333) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.32,HUM=34.01,-28,8[0m
+
+[0;32mI (10353) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.31,HUM=34.00,-27,7[0m
++RCV=0,20,TEMP=23.32,HUM=34.04,-27,8
+
+[0;32mI (13373) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=34.10,-26,9[0m
+
+[0;32mI (16393) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.31,HUM=34.03,-28,8[0m
+
+[0;32mI (19413) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.34,HUM=34.08,-28,8[0m
++RCV=0,20,TEMP=23.33,HUM=34.14,-28,8
+
+[0;32mI (22433) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=34.18,-28,8[0m
+
+[0;32mI (25453) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.32,HUM=34.20,-28,8[0m
++RCV=0,20,TEMP=23.33,HUM=34.07,-29,8
+
+[0;32mI (28473) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.30,HUM=34.04,-27,9[0m
+
+[0;32mI (31493) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=34.14,-28,8[0m
++RCV=0,20,TEMP=23.33,HUM=34.23,-28,9
+
+[0;32mI (34513) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.34,HUM=34.20,-28,9[0m
+
+[0;32mI (37533) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.32,HUM=34.22,-28,8[0m
+
+[0;32mI (40553) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.35,HUM=34.23,-28,8[0m
++RCV=0,20,TEMP=23.35,HUM=34.16,-28,8
+
+[0;32mI (43573) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=33.95,-28,8[0m
+
+[0;32mI (46593) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=33.97,-28,8[0m
++RCV=0,20,TEMP=23.34,HUM=34.08,-28,8
+
+[0;32mI (49613) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.34,HUM=34.13,-28,9[0m
+
+[0;32mI (52633) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.34,HUM=34.10,-28,9[0m
+
+[0;32mI (55653) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.34,HUM=34.05,-29,9[0m
++RCV=0,20,TEMP=23.34,HUM=33.99,-28,9
+
+[0;32mI (58673) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.35,HUM=33.96,-28,8[0m
+
+[0;32mI (61693) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.33,HUM=33.92,-28,9[0m
++RCV=0,20,TEMP=23.34,HUM=34.06,-28,8
+
+[0;32mI (64713) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.35,HUM=34.03,-28,9[0m
+
+[0;32mI (67733) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.35,HUM=34.07,-28,8[0m
++RCV=0,20,TEMP=23.36,HUM=34.14,-33,8
+
+[0;32mI (70753) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.14,-33,9[0m
+
+[0;32mI (73773) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.35,HUM=34.12,-33,8[0m
+
+[0;32mI (76793) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.36,HUM=34.14,-33,9[0m
++RCV=0,20,TEMP=23.36,HUM=34.15,-34,10
+
+[0;32mI (79813) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.23,-34,9[0m
+
+[0;32mI (82833) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.40,-34,9[0m
++RCV=0,20,TEMP=23.37,HUM=34.40,-30,9
+
+[0;32mI (85853) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.48,-28,8[0m
+
+[0;32mI (88873) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.44,-28,8[0m
++RCV=0,20,TEMP=23.37,HUM=34.34,-29,8
+
+[0;32mI (91893) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.24,-28,9[0m
+
+[0;32mI (94913) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.15,-28,9[0m
+
+[0;32mI (97933) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.36,HUM=34.14,-28,8[0m
++RCV=0,20,TEMP=23.38,HUM=34.09,-28,9
+
+[0;32mI (100953) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.08,-28,9[0m
+
+[0;32mI (103973) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.05,-29,8[0m
++RCV=0,20,TEMP=23.38,HUM=34.14,-28,8
+
+[0;32mI (106993) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.36,HUM=34.16,-28,9[0m
+
+[0;32mI (110013) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.22,-28,8[0m
++RCV=0,20,TEMP=23.37,HUM=34.20,-28,9
+
+[0;32mI (113033) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.36,HUM=34.09,-28,8[0m
+
+[0;32mI (116053) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.96,-28,9[0m
+
+[0;32mI (119073) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.93,-28,9[0m
++RCV=0,20,TEMP=23.41,HUM=33.91,-28,8
+
+[0;32mI (122093) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=33.96,-28,8[0m
+
+[0;32mI (125113) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.06,-35,8[0m
++RCV=0,20,TEMP=23.38,HUM=33.99,-34,9
+
+[0;32mI (128133) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.03,-33,9[0m
+
+[0;32mI (131153) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.97,-33,9[0m
++RCV=0,20,TEMP=23.38,HUM=33.79,-33,8
+
+[0;32mI (134173) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.72,-33,8[0m
+
+[0;32mI (137193) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=33.74,-31,9[0m
+
+[0;32mI (140213) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=33.82,-28,8[0m
++RCV=0,20,TEMP=23.38,HUM=34.08,-28,8
+
+[0;32mI (143233) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.12,-32,8[0m
+
+[0;32mI (146253) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.16,-33,8[0m
++RCV=0,20,TEMP=23.39,HUM=34.20,-33,8
+
+[0;32mI (149273) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.05,-33,8[0m
+
+[0;32mI (152293) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=33.98,-33,9[0m
+
+[0;32mI (155313) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.90,-33,8[0m
++RCV=0,20,TEMP=23.40,HUM=33.86,-32,8
+
+[0;32mI (158333) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=33.79,-28,8[0m
+
+[0;32mI (161353) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=33.84,-28,8[0m
++RCV=0,20,TEMP=23.38,HUM=33.90,-28,8
+
+[0;32mI (164373) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.03,-28,9[0m
+
+[0;32mI (167393) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.41,HUM=34.06,-28,8[0m
++RCV=0,20,TEMP=23.39,HUM=34.09,-28,8
+
+[0;32mI (170413) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.05,-28,8[0m
+
+[0;32mI (173433) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.41,HUM=34.17,-28,8[0m
+
+[0;32mI (176453) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.21,-28,8[0m
++RCV=0,20,TEMP=23.40,HUM=34.23,-28,9
+
+[0;32mI (179473) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.24,-28,8[0m
+
+[0;32mI (182493) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.41,HUM=34.16,-28,8[0m
++RCV=0,20,TEMP=23.41,HUM=34.11,-28,8
+
+[0;32mI (185513) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.99,-28,8[0m
+
+[0;32mI (188533) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.04,-28,9[0m
++RCV=0,20,TEMP=23.38,HUM=34.12,-27,8
+
+[0;32mI (191553) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=34.09,-28,9[0m
+
+[0;32mI (194573) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.07,-28,8[0m
+
+[0;32mI (197593) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.37,HUM=34.09,-28,9[0m
++RCV=0,20,TEMP=23.40,HUM=34.15,-28,9
+
+[0;32mI (200613) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.11,-28,9[0m
+
+[0;32mI (203633) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.06,-28,8[0m
++RCV=0,20,TEMP=23.38,HUM=34.10,-28,8
+
+[0;32mI (206653) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.03,-28,8[0m
+
+[0;32mI (209673) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.97,-28,9[0m
++RCV=0,20,TEMP=23.41,HUM=33.94,-28,8
+
+[0;32mI (212693) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=33.90,-28,9[0m
+
+[0;32mI (215713) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.38,HUM=33.94,-28,8[0m
+
+[0;32mI (218733) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=33.96,-28,8[0m
+
+[0;32mI (1273) main_task: Returned from app_main()[0m
+[0;32mI (1293) RYLR998_RX_TEST: Recv from device str: +OK[0m
++OK
++OK
++OK
+
+[0;32mI (4313) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.27,-32,8[0m
++RCV=0,20,TEMP=23.40,HUM=34.34,-32,8
+
+[0;32mI (7333) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.39,-32,8[0m
+
+[0;32mI (10353) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.37,-32,8[0m
++RCV=0,20,TEMP=23.40,HUM=34.16,-32,8
+
+[0;32mI (13373) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.05,-32,8[0m
+
+[0;32mI (16393) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.41,HUM=34.00,-29,8[0m
++RCV=0,20,TEMP=23.40,HUM=34.02,-30,9
+
+[0;32mI (19413) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.42,HUM=34.05,-30,8[0m
+
+[0;32mI (22433) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.08,-30,8[0m
+
+[0;32mI (25453) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.13,-30,9[0m
++RCV=0,20,TEMP=23.40,HUM=34.16,-30,8
+
+[0;32mI (28473) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.09,-30,8[0m
+
+[0;32mI (31493) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.41,HUM=34.11,-30,8[0m
++RCV=0,20,TEMP=23.40,HUM=34.10,-30,9
+
+[0;32mI (34513) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.43,HUM=34.13,-31,8[0m
+
+[0;32mI (37533) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.40,HUM=34.21,-31,9[0m
++RCV=0,20,TEMP=23.42,HUM=34.33,-31,8
+
+[0;32mI (40553) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.42,HUM=34.36,-32,8[0m
+
+[0;32mI (43573) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.43,HUM=34.32,-32,8[0m
+
+[0;32mI (46593) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.39,HUM=34.31,-32,8[0m
+
+[0;32mI (1273) main_task: Returned from app_main()[0m
+[0;32mI (1293) RYLR998_RX_TEST: Recv from device str: +OK[0m
++OK
++OK
++OK
+
+[0;32mI (4313) RYLR998_RX_TEST: Recv from device str: +RCV=0,20,TEMP=23.30,HUM=34.49,-27,8[0m
+

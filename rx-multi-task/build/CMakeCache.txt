@@ -608,7 +608,7 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.53.0()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python][found components: Interpreter ][v3.14.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python][found components: Interpreter ][v3.14.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -621,7 +621,7 @@ _Python3_Compiler_REASON_FAILURE:INTERNAL=
 _Python3_Development_REASON_FAILURE:INTERNAL=
 _Python3_EXECUTABLE:INTERNAL=/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;2;32;64;;;abi3;/usr/lib/python3.14;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;3;32;64;;;abi3;/usr/lib/python3.14;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages;/home/yabi/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=f6d1593c5defbe07c172cdb723585392
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=

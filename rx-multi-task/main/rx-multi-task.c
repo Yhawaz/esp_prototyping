@@ -43,7 +43,7 @@ static void mpu6050_init()
     mpu6050_wake_up(mpu6050_dev);
 }
 
-static void rx_task(void *arg){
+static void rx_init(){
     //toggle reset 
     gpio_set_direction(GPIO_NUM_7, GPIO_MODE_OUTPUT);
     gpio_set_level(GPIO_NUM_7, 1);
@@ -94,7 +94,24 @@ static void rx_task(void *arg){
     uart_write_bytes(UART_NUM_1, (const char *) data, len);
     vTaskDelay(100 / portTICK_PERIOD_MS); 
 
-    while(1){
+//    while(1){
+//        len = uart_read_bytes(UART_NUM_1, data, (BUF_SIZE - 1), 20 / portTICK_PERIOD_MS);
+//        if (len) {
+//            lora_working=true;
+//            data[len] = '\0';
+//            ESP_LOGI(TAG, "Recv from device str: %s", (char *) data);
+//        }else{
+//            lora_working=false;
+//        }
+//        vTaskDelay(3000 / portTICK_PERIOD_MS); 
+//    }
+}
+static void rx_task(){
+    int len=0;
+    int timeout=0;
+    char *data = (char *) malloc(BUF_SIZE);
+    while(!len){
+        timeout++;
         len = uart_read_bytes(UART_NUM_1, data, (BUF_SIZE - 1), 20 / portTICK_PERIOD_MS);
         if (len) {
             lora_working=true;
@@ -103,8 +120,9 @@ static void rx_task(void *arg){
         }else{
             lora_working=false;
         }
-        vTaskDelay(3000 / portTICK_PERIOD_MS); 
+        vTaskDelay(100 / portTICK_PERIOD_MS); // Delay for 300 millisecond
     }
+
 }
 
 static void flash_task(void *args){
@@ -145,7 +163,10 @@ static void acc_task(void *args){
 
 void app_main(void){
     mpu6050_init();
-    xTaskCreate(rx_task, "rx_task", ECHO_TASK_STACK_SIZE, NULL, 10, NULL);
+    rx_init();
     xTaskCreate(flash_task, "flash_task", ECHO_TASK_STACK_SIZE, NULL, 10, NULL);
     xTaskCreate(acc_task, "acc_task", ECHO_TASK_STACK_SIZE, NULL, 10, NULL);
+    while(1){
+        rx_task();
+    }
 }
