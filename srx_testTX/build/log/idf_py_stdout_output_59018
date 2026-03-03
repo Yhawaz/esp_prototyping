@@ -1,0 +1,62 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/yabi/skool/6900/prototyping/srx_testTX/build/bootloader/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/yabi/skool/6900/prototyping/srx_testTX/build/bootloader/bootloader.bin
+Bootloader binary size 0x5270 bytes. 0x2d90 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/srx_testTX.cpp.obj
+/home/yabi/skool/6900/prototyping/srx_testTX/main/srx_testTX.cpp:1:9: warning: #pragma once in main file
+    1 | #pragma once
+      |         ^~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable srx_testTX.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /home/yabi/skool/6900/prototyping/srx_testTX/build/srx_testTX.bin
+[9/10] cd /home/yabi/skool/6900/prototyping/srx_testTX/build/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/yabi/skool/6900/prototyping/srx_testTX/build/partition_table/partition-table.bin /home/yabi/skool/6900/prototyping/srx_testTX/build/srx_testTX.bin
+srx_testTX.bin binary size 0x37930 bytes. Smallest app partition is 0x100000 bytes. 0xc86d0 bytes (78%) free.
+[9/10] cd /opt/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/opt/esp-idf -D "SERIAL_TOOL=/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python;;/opt/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/yabi/skool/6900/prototyping/srx_testTX/build -P /opt/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 srx_testTX.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: ec:da:3b:13:d9:24
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00047fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21104 bytes to 13262...
+Writing at 0x00000000... (100 %)
+Wrote 21104 bytes (13262 compressed) at 0x00000000 in 0.6 seconds (effective 260.4 kbit/s)...
+Hash of data verified.
+Compressed 227632 bytes to 119324...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001b23c... (25 %)
+Writing at 0x00021f4c... (37 %)
+Writing at 0x000292a3... (50 %)
+Writing at 0x00031619... (62 %)
+Writing at 0x0003819c... (75 %)
+Writing at 0x0003e3b9... (87 %)
+Writing at 0x000456cc... (100 %)
+Wrote 227632 bytes (119324 compressed) at 0x00010000 in 3.7 seconds (effective 493.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 392.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

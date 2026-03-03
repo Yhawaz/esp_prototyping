@@ -1,0 +1,16 @@
+Command: ninja all
+[1/7] Performing build step for 'bootloader'
+[1/1] cd /home/yabi/skool/6900/prototyping/srx_testTX/build/bootloader/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/yabi/skool/6900/prototyping/srx_testTX/build/bootloader/bootloader.bin
+Bootloader binary size 0x5270 bytes. 0x2d90 bytes (36%) free.
+[2/7] No install step for 'bootloader'
+[3/7] Completed 'bootloader'
+[4/7] Generating esp-idf/esp_system/ld/sections.ld
+[5/7] Linking CXX executable srx_testTX.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /home/yabi/skool/6900/prototyping/srx_testTX/build/srx_testTX.bin
+[7/7] cd /home/yabi/skool/6900/prototyping/srx_testTX/build/esp-idf/esptool_py && /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/yabi/skool/6900/prototyping/srx_testTX/build/partition_table/partition-table.bin /home/yabi/skool/6900/prototyping/srx_testTX/build/srx_testTX.bin
+srx_testTX.bin binary size 0x378b0 bytes. Smallest app partition is 0x100000 bytes. 0xc8750 bytes (78%) free.

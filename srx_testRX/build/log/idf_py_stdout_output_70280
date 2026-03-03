@@ -1,0 +1,78 @@
+Command: /home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/yabi/skool/6900/prototyping/srx_testRX/build/srx_testRX.elf /home/yabi/skool/6900/prototyping/srx_testRX/build/bootloader/bootloader.elf -m '/home/yabi/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/opt/esp-idf/tools/idf.py'
+000000 size=00020h (    32) load
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disablin�ESP-ROM:esp32c3-eco7-20230720[0m
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c4
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (31) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  3 2026 10:57:00[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (40) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b12ch ( 45356) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0001b154 vaddr=3fc8e200 size=01488h (  5256) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001c5e4 vaddr=40380000 size=03a34h ( 14900) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d1c4h (119236) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=0003d1ec vaddr=40383a34 size=0a648h ( 42568) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=0004783c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Unicore app[0m
+[0;32mI (166) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     srx_testRX[0m
+[0;32mI (176) app_init: App version:      175b1ab-dirty[0m
+[0;32mI (181) app_init: Compile time:     Mar  3 2026 10:56:55[0m
+[0;32mI (186) app_init: ELF file SHA256:  d0d1fe1f3...[0m
+[0;32mI (190) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (195) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (199) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (203) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (207) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (213) heap_init: At 3FC90570 len 0002FA90 (190 KiB): RAM[0m
+[0;32mI (218) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (224) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (230) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (236) spi_flash: detected chip: generic[0m
+[0;32mI (239) spi_flash: flash io: dio[0m
+[0;33mW (242) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (254) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (260) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (267) main_task: Started on CPU0[0m
+[0;32mI (277) main_task: Calling app_main()[0m
+Initializing SX1276...
+Radio init OK
+[1;31mE (5277) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (5277) task_wdt:  - IDLE (CPU 0)[0m
+[1;31mE (5277) task_wdt: Tasks currently running:[0m
+[1;31mE (5277) task_wdt: CPU 0: main[0m
+[1;31mE (5277) task_wdt: Print CPU 0 (current core) registers[0m
+Core  0 register dump:
+MEPC    : 0x4200c5ea  RA      : 0x4200c5ea  SP      : 0x3fc91d50  GP      : 0x3fc8ea00  
+TP      : 0x3fc92060  T0      : 0x40058d30  T1      : 0x00000000  T2      : 0x00000000  
+S0/FP   : 0x3fc91e88  S1      : 0x000007d0  A0      : 0x000013ba  A1      : 0x00000000  
+A2      : 0x0000fa00  A3      : 0x000013ba  A4      : 0x5c400000  A5      : 0x000013ba  
+A6      : 0xfa000000  A7      : 0x5c400000  S2      : 0x00000100  S3      : 0x3fc91d88  
+S4      : 0x00000fe3  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00001344  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001889  MTVEC   : 0x40380001  MCAUSE  : 0xdeadc0de  MTVAL   : 0xdeadc0de  
+MHARTID : 0x00000000  
+Please enable CONFIG_ESP_SYSTEM_USE_FRAME_POINTER option to have a full backtrace.
